@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Young's Quality Contracting LLC | Medicaid EAA Accessibility Contractor – Louisiana</title>
+<title>Young's Quality Contracting LLC | Home Accessibility Contractor – Louisiana</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -31,7 +31,6 @@ body{font-family:var(--font-b);color:var(--text);background:var(--white);-webkit
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
-/* ─── UTILS ─── */
 .container{max-width:1160px;margin:0 auto;padding:0 24px}
 .section{padding:80px 0}
 .section-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
@@ -40,11 +39,8 @@ a{text-decoration:none;color:inherit}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-b);font-weight:600;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:14px 28px;transition:all .2s;cursor:pointer;border:none}
 .btn-gold{background:var(--gold);color:var(--white)}
 .btn-gold:hover{background:#b87e20;transform:translateY(-1px)}
-.btn-navy{background:var(--navy);color:var(--white)}
-.btn-navy:hover{background:var(--navy2);transform:translateY(-1px)}
 .btn-outline{background:transparent;border:2px solid var(--white);color:var(--white)}
 .btn-outline:hover{background:rgba(255,255,255,.12)}
-.tag{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
 
 /* ─── NAV ─── */
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s}
@@ -59,14 +55,12 @@ a{text-decoration:none;color:inherit}
 .nav-links a:hover{color:var(--gold)!important}
 .nav-cta-btn{background:var(--gold);color:var(--white)!important;padding:10px 22px;border-radius:6px}
 .nav-cta-btn:hover{background:#b87e20!important}
-/* hamburger */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
 #nav.scrolled .hamburger span{background:var(--navy)}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-/* mobile menu */
 #mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--navy);z-index:999;padding:32px 24px;overflow-y:auto}
 #mobile-menu.open{display:flex;flex-direction:column;gap:8px}
 #mobile-menu a{display:block;font-size:1.1rem;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.8);padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -79,27 +73,22 @@ a{text-decoration:none;color:inherit}
 .hero-pattern{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px}
 .hero-accent{position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(212,149,42,.15) 0%,transparent 70%);pointer-events:none}
 .hero-accent2{position:absolute;left:-150px;bottom:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(212,149,42,.08) 0%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:2;container:var(--container);padding:120px 24px 80px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-inner{position:relative;z-index:2;padding:120px 24px 80px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .hero-badge-row{display:flex;align-items:center;gap:10px;margin-bottom:20px}
 .hero-badge{background:rgba(212,149,42,.18);border:1px solid rgba(212,149,42,.4);color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:20px}
-.verified-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0}
-.verified-label{font-size:11px;color:rgba(255,255,255,.5);font-weight:500}
 .hero h1{font-family:var(--font-h);font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.1;margin-bottom:20px}
 .hero h1 em{color:var(--gold);font-style:italic;display:block}
 .hero-desc{color:rgba(255,255,255,.68);font-size:1.1rem;line-height:1.75;margin-bottom:32px;max-width:500px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:28px}
-.hero-stat-item{}
 .hero-stat-num{font-family:var(--font-h);font-size:1.8rem;color:var(--white);line-height:1}
 .hero-stat-num span{color:var(--gold)}
 .hero-stat-label{font-size:11px;color:rgba(255,255,255,.45);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
-/* hero card */
 .hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
 .hero-card-header{font-family:var(--font-h);font-size:1rem;color:var(--gold);border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:14px}
 .hc-item{display:flex;align-items:center;gap:14px}
 .hc-icon{width:40px;height:40px;border-radius:8px;background:rgba(212,149,42,.15);border:1px solid rgba(212,149,42,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hc-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hc-text{}
 .hc-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2px}
 .hc-val{font-size:.95rem;font-weight:600;color:var(--white)}
 .hero-phone-bar{background:rgba(212,149,42,.12);border:1px solid rgba(212,149,42,.3);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px}
@@ -121,10 +110,8 @@ a{text-decoration:none;color:inherit}
 .about-img-placeholder svg{width:64px;height:64px;stroke:rgba(255,255,255,.2);fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
 .about-img-placeholder p{font-size:.8rem;color:rgba(255,255,255,.35);line-height:1.5}
 .about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--gold);color:var(--white);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow-lg);text-align:center}
-.about-badge-num{font-family:var(--font-h);font-size:2rem;line-height:1}
-.about-badge-label{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-top:2px}
-.about-content{}
-.about-content .section-sub{max-width:100%}
+.about-badge-num{font-family:var(--font-h);font-size:1.6rem;line-height:1}
+.about-badge-label{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-top:2px}
 .about-quote{background:var(--white);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 24px;margin:28px 0;font-style:italic;color:var(--navy);font-size:1.05rem;line-height:1.7}
 .about-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .about-pill{background:var(--white);border:1px solid var(--border);color:var(--navy);font-size:.8rem;font-weight:600;padding:8px 16px;border-radius:20px;display:flex;align-items:center;gap:6px}
@@ -137,7 +124,6 @@ a{text-decoration:none;color:inherit}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
 .svc-card:hover::after{transform:scaleX(1)}
-.svc-num{font-family:var(--font-h);font-size:3rem;color:var(--gold-light);font-weight:700;line-height:1;margin-bottom:16px}
 .svc-icon{width:52px;height:52px;background:var(--gold-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .svc-icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .svc-card h3{font-family:var(--font-h);font-size:1.25rem;color:var(--navy);margin-bottom:10px}
@@ -146,33 +132,13 @@ a{text-decoration:none;color:inherit}
 .svc-feat{font-size:.82rem;color:var(--navy);font-weight:500;display:flex;align-items:center;gap:8px}
 .svc-feat::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-/* ─── MEDICAID ─── */
-.medicaid{background:var(--navy);padding:80px 0}
-.medicaid-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.medicaid h2{font-family:var(--font-h);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--white);margin-bottom:16px}
-.medicaid p{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.75;margin-bottom:20px}
-.medicaid-steps{display:flex;flex-direction:column;gap:16px}
-.med-step{display:flex;gap:16px;align-items:flex-start}
-.med-step-num{width:36px;height:36px;border-radius:50%;background:rgba(212,149,42,.2);border:1px solid rgba(212,149,42,.4);display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:1rem;color:var(--gold);flex-shrink:0}
-.med-step-text h4{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:3px}
-.med-step-text p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.5}
-.medicaid-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:20px}
-.med-card-title{font-family:var(--font-h);font-size:1.1rem;color:var(--gold);border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:16px}
-.med-info-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.med-info-row:last-of-type{border-bottom:none}
-.med-info-label{font-size:.82rem;color:rgba(255,255,255,.45);font-weight:500}
-.med-info-val{font-size:.9rem;color:var(--white);font-weight:600}
-.med-highlight{background:rgba(212,149,42,.1);border:1px solid rgba(212,149,42,.25);border-radius:8px;padding:16px;font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6}
-.med-highlight strong{color:var(--gold2);display:block;margin-bottom:4px}
-
 /* ─── GALLERY ─── */
 .gallery{background:var(--cream)}
-.gallery-intro{margin-bottom:48px}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .gallery-item{border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer}
 .gallery-item:first-child{grid-column:span 2;grid-row:span 2}
 .gallery-placeholder{width:100%;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,.5);padding:24px;text-align:center;transition:transform .3s}
-.gallery-item:first-child .gallery-placeholder{aspect-ratio:unset;min-height:340px}
+.gallery-item:first-child .gallery-placeholder{min-height:340px}
 .gallery-placeholder{aspect-ratio:4/3}
 .gallery-item:hover .gallery-placeholder{transform:scale(1.03)}
 .gallery-placeholder svg{width:40px;height:40px;stroke:rgba(255,255,255,.25);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -255,13 +221,13 @@ footer{background:#071420;padding:48px 0 24px}
 .footer-col ul a:hover{color:var(--gold)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-copy{font-size:.8rem;color:rgba(255,255,255,.3)}
-.footer-badge{background:rgba(76,222,128,.1);border:1px solid rgba(76,222,128,.25);color:#4ade80;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:4px}
+.footer-badge{background:rgba(212,149,42,.12);border:1px solid rgba(212,149,42,.3);color:var(--gold2);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:4px}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:40px}
   .hero-card{max-width:480px}
-  .about-grid,.medicaid-inner,.areas-inner,.contact-inner{grid-template-columns:1fr;gap:40px}
+  .about-grid,.areas-inner,.contact-inner{grid-template-columns:1fr;gap:40px}
   .about-badge{right:0;bottom:-16px}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .gallery-item:first-child{grid-column:span 2;grid-row:span 1}
@@ -290,14 +256,13 @@ footer{background:#071420;padding:48px 0 24px}
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">Young's <span>Quality</span> Contracting</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#medicaid">Medicaid EAA</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#areas">Service Areas</a></li>
       <li><a href="#contact" class="nav-cta-btn">Contact Us</a></li>
@@ -310,16 +275,15 @@ footer{background:#071420;padding:48px 0 24px}
 
 <!-- Mobile Menu -->
 <div id="mobile-menu">
-  <a href="#about" class="mob-link">About Us</a>
-  <a href="#services" class="mob-link">Our Services</a>
-  <a href="#medicaid" class="mob-link">Medicaid EAA</a>
-  <a href="#gallery" class="mob-link">Before & After</a>
-  <a href="#process" class="mob-link">How It Works</a>
-  <a href="#areas" class="mob-link">Service Areas</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Our Services</a>
+  <a href="#gallery">Before &amp; After</a>
+  <a href="#process">How It Works</a>
+  <a href="#areas">Service Areas</a>
   <a href="#contact" class="mob-cta">📞 Call (504) 329-9223</a>
 </div>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-pattern"></div>
@@ -328,12 +292,10 @@ footer{background:#071420;padding:48px 0 24px}
   <div class="hero-inner">
     <div>
       <div class="hero-badge-row">
-        <span class="hero-badge">✓ Approved Medicaid EAA Contractor</span>
-        <div class="verified-dot"></div>
-        <span class="verified-label">Louisiana State Verified</span>
+        <span class="hero-badge">✓ Licensed &amp; Insured Contractor</span>
       </div>
       <h1>Home Accessibility <em>Done Right.</em></h1>
-      <p class="hero-desc">Young's Quality Contracting LLC installs certified accessibility modifications for elderly and disabled Louisiana residents — fully covered through the Medicaid EAA waiver program.</p>
+      <p class="hero-desc">Young's Quality Contracting LLC specializes in professional home accessibility modifications for elderly and disabled Louisiana residents — making your home safer and more independent.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-gold">Get a Free Assessment</a>
         <a href="#services" class="btn btn-outline">Our Services</a>
@@ -344,12 +306,12 @@ footer{background:#071420;padding:48px 0 24px}
           <div class="hero-stat-label">Services Offered</div>
         </div>
         <div class="hero-stat-item">
-          <div class="hero-stat-num">$0</div>
-          <div class="hero-stat-label">Out-of-Pocket (EAA)</div>
-        </div>
-        <div class="hero-stat-item">
           <div class="hero-stat-num">8<span>+</span></div>
           <div class="hero-stat-label">Parishes Served</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">ADA</div>
+          <div class="hero-stat-label">Compliant Work</div>
         </div>
       </div>
     </div>
@@ -358,30 +320,30 @@ footer{background:#071420;padding:48px 0 24px}
         <div class="hero-card-header">Why choose Young's Quality Contracting?</div>
         <div class="hc-item">
           <div class="hc-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/></svg></div>
-          <div class="hc-text">
-            <div class="hc-label">Status</div>
-            <div class="hc-val">Approved EAA Contractor</div>
-          </div>
-        </div>
-        <div class="hc-item">
-          <div class="hc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <div class="hc-text">
+          <div>
             <div class="hc-label">Registration</div>
             <div class="hc-val">Licensed LLC — Louisiana</div>
           </div>
         </div>
         <div class="hc-item">
-          <div class="hc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="hc-text">
-            <div class="hc-label">Specialization</div>
-            <div class="hc-val">ADA-Compliant Home Mods</div>
+          <div class="hc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div>
+            <div class="hc-label">Standards</div>
+            <div class="hc-val">ADA-Compliant Installations</div>
           </div>
         </div>
         <div class="hc-item">
-          <div class="hc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="hc-text">
-            <div class="hc-label">Clients</div>
-            <div class="hc-val">Elderly & Disabled Residents</div>
+          <div class="hc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <div>
+            <div class="hc-label">Specialization</div>
+            <div class="hc-val">Home Accessibility Modifications</div>
+          </div>
+        </div>
+        <div class="hc-item">
+          <div class="hc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="hc-label">Assessment</div>
+            <div class="hc-val">Free Home Visits</div>
           </div>
         </div>
         <div class="hero-phone-bar">
@@ -396,18 +358,18 @@ footer{background:#071420;padding:48px 0 24px}
   </div>
 </section>
 
-<!-- ═══ TRUST BAR ═══ -->
+<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-items">
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z"/></svg>Approved Medicaid EAA Provider</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Licensed & Insured LLC</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed &amp; Insured</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Louisiana LLC</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Free Home Assessments</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ADA-Compliant Installations</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z"/></svg>ADA-Compliant Installations</div>
     <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Serving Greater New Orleans</div>
   </div>
 </div>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 <section class="section about" id="about">
   <div class="container">
     <div class="about-grid">
@@ -420,8 +382,8 @@ footer{background:#071420;padding:48px 0 24px}
           </div>
         </div>
         <div class="about-badge">
-          <div class="about-badge-num">EAA</div>
-          <div class="about-badge-label">Approved</div>
+          <div class="about-badge-num">100%</div>
+          <div class="about-badge-label">Quality Work</div>
         </div>
       </div>
       <div class="about-content">
@@ -429,25 +391,25 @@ footer{background:#071420;padding:48px 0 24px}
         <h2 class="section-title">Hi, I'm Caden Young</h2>
         <p class="section-sub">I started Young's Quality Contracting LLC because I believe every Louisiana resident deserves to live safely and independently in their own home — regardless of age or ability.</p>
         <div class="about-quote">"My goal is simple: show up on time, do the job right, and make sure every client feels taken care of from the first call to the final walkthrough."</div>
-        <p style="font-size:.9rem;color:var(--gray);line-height:1.7;margin-bottom:20px">As an approved Medicaid EAA contractor, I work directly with case managers and state agencies to make the entire process smooth and stress-free for clients and their families. No runaround, no surprises — just quality work you can count on.</p>
+        <p style="font-size:.9rem;color:var(--gray);line-height:1.7;margin-bottom:20px">We work closely with clients and their families to identify the right modifications for their specific needs — and we handle the entire process from assessment to installation. No runaround, no surprises — just quality work you can count on.</p>
         <div class="about-pills">
-          <span class="about-pill">Approved EAA Contractor</span>
           <span class="about-pill">Licensed Louisiana LLC</span>
           <span class="about-pill">ADA-Compliant Work</span>
           <span class="about-pill">Free Assessments</span>
-          <span class="about-pill">Works with Case Managers</span>
+          <span class="about-pill">On-Time Completion</span>
+          <span class="about-pill">Client-First Approach</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICES ═══ -->
+<!-- SERVICES -->
 <section class="section services" id="services">
   <div class="container">
     <p class="section-label">What We Do</p>
     <h2 class="section-title">Our Accessibility Services</h2>
-    <p class="section-sub">Every modification is installed to ADA standards. We handle everything — permits, coordination with your case manager, and professional installation.</p>
+    <p class="section-sub">Every modification is installed to ADA standards. We handle everything from assessment to final walkthrough — professionally and on schedule.</p>
     <div class="services-grid">
 
       <div class="svc-card">
@@ -455,7 +417,7 @@ footer{background:#071420;padding:48px 0 24px}
         <h3>Wheelchair Ramps</h3>
         <p>Custom-built exterior and interior ramps designed to ADA slope requirements with non-slip surfaces and handrails for safe, independent access.</p>
         <div class="svc-features">
-          <span class="svc-feat">Exterior & interior ramps</span>
+          <span class="svc-feat">Exterior &amp; interior ramps</span>
           <span class="svc-feat">Non-slip surface materials</span>
           <span class="svc-feat">Proper ADA slope ratio</span>
           <span class="svc-feat">Includes handrails</span>
@@ -464,12 +426,12 @@ footer{background:#071420;padding:48px 0 24px}
 
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6"/><path d="M8 11h8"/><path d="M10 13l-2 8"/><path d="M14 13l2 8"/></svg></div>
-        <h3>Grab Bars & Handrails</h3>
+        <h3>Grab Bars &amp; Handrails</h3>
         <p>Structurally anchored grab bars installed into studs for maximum safety in bathrooms, hallways, and along stairways — built to hold when it matters most.</p>
         <div class="svc-features">
           <span class="svc-feat">Stud-anchored installation</span>
-          <span class="svc-feat">Bathroom & shower bars</span>
-          <span class="svc-feat">Hallway & stairway rails</span>
+          <span class="svc-feat">Bathroom &amp; shower bars</span>
+          <span class="svc-feat">Hallway &amp; stairway rails</span>
           <span class="svc-feat">Various finish options</span>
         </div>
       </div>
@@ -477,18 +439,18 @@ footer{background:#071420;padding:48px 0 24px}
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M3 12h6"/></svg></div>
         <h3>Widened Doorways</h3>
-        <p>Full structural doorway widening to ADA-compliant 32–36 inch clear openings — accommodating wheelchairs and walkers with complete finish work included.</p>
+        <p>Full structural doorway widening to ADA-compliant 32–36 inch clear openings, accommodating wheelchairs and walkers with complete finish work included.</p>
         <div class="svc-features">
           <span class="svc-feat">32–36" clear opening</span>
           <span class="svc-feat">Structural modification</span>
-          <span class="svc-feat">Hardware & trim included</span>
+          <span class="svc-feat">Hardware &amp; trim included</span>
           <span class="svc-feat">Full finish work</span>
         </div>
       </div>
 
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 20V8q0-4 4-4h8q4 0 4 4v12"/><path d="M2 20h20"/><path d="M8 20v-8q0-2 2-2h4q2 0 2 2v8"/></svg></div>
-        <h3>Roll-In Showers & Tub Cuts</h3>
+        <h3>Roll-In Showers &amp; Tub Cuts</h3>
         <p>Zero-threshold roll-in shower conversions and tub step-down cuts — fully waterproofed and tiled for safe, comfortable daily bathing without obstacles.</p>
         <div class="svc-features">
           <span class="svc-feat">Zero-threshold entry</span>
@@ -500,8 +462,8 @@ footer{background:#071420;padding:48px 0 24px}
 
       <div class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="5" rx="1"/><rect x="5" y="17" width="14" height="5" rx="1"/><path d="M12 7v10"/><path d="M8 10l4-3 4 3"/></svg></div>
-        <h3>Stair Lifts & Platform Lifts</h3>
-        <p>Motorized stair lifts for straight staircases and vertical platform lifts for multi-level access — professionally installed, tested, and ready for daily use.</p>
+        <h3>Stair Lifts &amp; Platform Lifts</h3>
+        <p>Motorized stair lifts and vertical platform lifts for multi-level home access — professionally installed, tested, and ready for safe daily use.</p>
         <div class="svc-features">
           <span class="svc-feat">Straight stair lifts</span>
           <span class="svc-feat">Vertical platform lifts</span>
@@ -514,76 +476,15 @@ footer{background:#071420;padding:48px 0 24px}
   </div>
 </section>
 
-<!-- ═══ MEDICAID ═══ -->
-<section class="medicaid" id="medicaid">
-  <div class="container">
-    <div class="medicaid-inner">
-      <div>
-        <p class="section-label" style="color:var(--gold)">Medicaid EAA Program</p>
-        <h2>We Handle the Paperwork — You Get the Modifications</h2>
-        <p>As a state-approved Environmental Accessibility Adaptation (EAA) contractor, we work directly with your Medicaid case manager to authorize and complete your home modifications at <strong style="color:var(--gold2)">no out-of-pocket cost</strong> to eligible participants.</p>
-        <div class="medicaid-steps">
-          <div class="med-step">
-            <div class="med-step-num">1</div>
-            <div class="med-step-text">
-              <h4>Confirm Eligibility</h4>
-              <p>We verify your Medicaid EAA waiver status with your case manager before any work begins.</p>
-            </div>
-          </div>
-          <div class="med-step">
-            <div class="med-step-num">2</div>
-            <div class="med-step-text">
-              <h4>Assessment & Authorization</h4>
-              <p>We assess your home and submit the required documentation for state approval.</p>
-            </div>
-          </div>
-          <div class="med-step">
-            <div class="med-step-num">3</div>
-            <div class="med-step-text">
-              <h4>Approved & Scheduled</h4>
-              <p>Once authorized, we schedule your installation at your convenience — no delays.</p>
-            </div>
-          </div>
-          <div class="med-step">
-            <div class="med-step-num">4</div>
-            <div class="med-step-text">
-              <h4>Professional Installation</h4>
-              <p>All work is completed to code. We bill Medicaid directly — you pay nothing.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="medicaid-card">
-          <div class="med-card-title">Program Quick Facts</div>
-          <div class="med-info-row"><span class="med-info-label">Program Name</span><span class="med-info-val">Medicaid EAA Waiver</span></div>
-          <div class="med-info-row"><span class="med-info-label">Contractor Status</span><span class="med-info-val" style="color:#4ade80">✓ Approved</span></div>
-          <div class="med-info-row"><span class="med-info-label">Client Cost</span><span class="med-info-val" style="color:var(--gold2)">$0 Out-of-Pocket</span></div>
-          <div class="med-info-row"><span class="med-info-label">Who Qualifies</span><span class="med-info-val">Medicaid Waiver Recipients</span></div>
-          <div class="med-info-row"><span class="med-info-label">Billing</span><span class="med-info-val">Direct to Medicaid</span></div>
-          <div class="med-info-row"><span class="med-info-label">Service Region</span><span class="med-info-val">Greater New Orleans, LA</span></div>
-          <div class="med-highlight">
-            <strong>Not sure if you qualify?</strong>
-            Call us at (504) 329-9223 — we'll help you check your eligibility and connect you with the right resources at no cost.
-          </div>
-          <a href="tel:+15043299223" class="btn btn-gold" style="width:100%;justify-content:center">Call to Check Eligibility</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ GALLERY ═══ -->
+<!-- GALLERY -->
 <section class="section gallery" id="gallery">
   <div class="container">
-    <div class="gallery-intro">
-      <p class="section-label">Before & After</p>
-      <h2 class="section-title">Our Work in Action</h2>
-      <p class="section-sub">Every job is completed with quality craftsmanship and attention to detail. Add your own before & after photos here to show clients what to expect.</p>
-    </div>
+    <p class="section-label">Before &amp; After</p>
+    <h2 class="section-title">Our Work in Action</h2>
+    <p class="section-sub" style="margin-bottom:48px">Every job is completed with quality craftsmanship and attention to detail. Add your own before &amp; after photos here to show clients what to expect.</p>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <div class="gallery-placeholder" style="min-height:340px;flex-direction:column">
+        <div class="gallery-placeholder" style="min-height:340px">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           <strong style="color:rgba(255,255,255,.4);font-size:.85rem">Add Featured Photo</strong>
           <p style="font-size:.75rem">Replace with your best before/after shot</p>
@@ -597,56 +498,44 @@ footer{background:#071420;padding:48px 0 24px}
         <div class="gallery-placeholder">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-        <div class="gallery-label">
-          <span class="gallery-type">Before</span>
-          <div>Standard tub — no access</div>
-        </div>
+        <div class="gallery-label"><span class="gallery-type">Before</span><div>Standard tub — no access</div></div>
       </div>
       <div class="gallery-item">
         <div class="gallery-placeholder">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-        <div class="gallery-label">
-          <span class="gallery-type">After</span>
-          <div>Roll-in shower conversion</div>
-        </div>
+        <div class="gallery-label"><span class="gallery-type">After</span><div>Roll-in shower conversion</div></div>
       </div>
       <div class="gallery-item">
         <div class="gallery-placeholder">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-        <div class="gallery-label">
-          <span class="gallery-type">Before</span>
-          <div>Narrow doorway — 24"</div>
-        </div>
+        <div class="gallery-label"><span class="gallery-type">Before</span><div>Narrow doorway — 24"</div></div>
       </div>
       <div class="gallery-item">
         <div class="gallery-placeholder">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
-        <div class="gallery-label">
-          <span class="gallery-type">After</span>
-          <div>Widened to 36" clear opening</div>
-        </div>
+        <div class="gallery-label"><span class="gallery-type">After</span><div>Widened to 36" clear opening</div></div>
       </div>
     </div>
-    <div class="gallery-note">📸 <strong>Photos coming soon.</strong> Replace the placeholders above with real before & after photos from your completed jobs to build trust with potential clients.</div>
+    <div class="gallery-note">📸 <strong>Photos coming soon.</strong> Replace the placeholders above with real before &amp; after photos from your completed jobs to build trust with potential clients.</div>
   </div>
 </section>
 
-<!-- ═══ PROCESS ═══ -->
+<!-- PROCESS -->
 <section class="section process" id="process">
   <div class="container">
     <div style="text-align:center;max-width:600px;margin:0 auto">
       <p class="section-label">How It Works</p>
       <h2 class="section-title">Simple Start to Finish</h2>
-      <p class="section-sub" style="margin:0 auto">From your first call to final walkthrough — we make the whole process easy.</p>
+      <p class="section-sub" style="margin:0 auto">From your first call to final walkthrough — we make the whole process easy on you and your family.</p>
     </div>
     <div class="process-grid">
       <div class="proc-step active">
         <div class="proc-num">1</div>
         <h4>Call or Email</h4>
-        <p>Reach out and tell us about your needs. We'll confirm your EAA eligibility right away.</p>
+        <p>Reach out and tell us about your needs. We'll answer your questions and get the ball rolling.</p>
       </div>
       <div class="proc-step">
         <div class="proc-num">2</div>
@@ -655,8 +544,8 @@ footer{background:#071420;padding:48px 0 24px}
       </div>
       <div class="proc-step">
         <div class="proc-num">3</div>
-        <h4>State Authorization</h4>
-        <p>We coordinate with your Medicaid case manager to get work orders approved.</p>
+        <h4>Review &amp; Plan</h4>
+        <p>We walk you through exactly what will be done, the timeline, and all the details before work begins.</p>
       </div>
       <div class="proc-step">
         <div class="proc-num">4</div>
@@ -666,13 +555,13 @@ footer{background:#071420;padding:48px 0 24px}
       <div class="proc-step">
         <div class="proc-num">5</div>
         <h4>Final Walkthrough</h4>
-        <p>We walk through every modification with you to make sure you're 100% satisfied.</p>
+        <p>We walk through every modification with you to make sure you're 100% satisfied before we leave.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WHY US ═══ -->
+<!-- WHY US -->
 <section class="section why">
   <div class="container">
     <p class="section-label">Why Choose Us</p>
@@ -681,8 +570,8 @@ footer{background:#071420;padding:48px 0 24px}
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/></svg></div>
-        <h4>State-Approved EAA Contractor</h4>
-        <p>We are fully vetted and approved by Louisiana Medicaid to perform EAA modifications — meaning your work orders get processed without issues.</p>
+        <h4>Licensed &amp; Insured</h4>
+        <p>Young's Quality Contracting LLC is fully licensed and insured in Louisiana — giving you peace of mind on every job.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -700,27 +589,27 @@ footer{background:#071420;padding:48px 0 24px}
         <p>You work directly with Caden — not a dispatcher or call center. Get real answers fast from the person actually doing your project.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h4>Zero Cost to You</h4>
-        <p>For eligible Medicaid EAA recipients, your modifications are 100% covered. We bill the state directly — you never see a bill.</p>
-      </div>
-      <div class="why-card">
         <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
         <h4>We Treat Your Home with Respect</h4>
-        <p>We keep job sites clean, protect your flooring and walls, and leave your home in better shape than we found it — every single time.</p>
+        <p>We keep job sites clean, protect your flooring and walls, and leave your home better than we found it — every single time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h4>We Care About Our Clients</h4>
+        <p>We work with elderly and disabled residents and their families every day. We take that responsibility seriously and treat every client with dignity and respect.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ AREAS ═══ -->
+<!-- AREAS -->
 <section class="section areas" id="areas">
   <div class="container">
     <div class="areas-inner">
       <div>
         <p class="section-label">Service Coverage</p>
         <h2 class="section-title">Parishes We Serve</h2>
-        <p class="section-sub">We serve clients throughout the Greater New Orleans metro area and surrounding parishes under the Louisiana Medicaid EAA waiver program.</p>
+        <p class="section-sub">We serve clients throughout the Greater New Orleans metro area and surrounding parishes across Southeast Louisiana.</p>
         <div class="parish-grid">
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">Orleans</div><div class="parish-sub">New Orleans</div></div></div>
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">Jefferson</div><div class="parish-sub">Metairie, Kenner</div></div></div>
@@ -731,7 +620,7 @@ footer{background:#071420;padding:48px 0 24px}
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">Livingston</div><div class="parish-sub">Denham Springs</div></div></div>
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">St. Charles</div><div class="parish-sub">Boutte, Luling</div></div></div>
         </div>
-        <div class="areas-note">📍 <strong>Don't see your parish?</strong> Give us a call at (504) 329-9223 — we may still be able to serve your area or connect you with a nearby approved provider.</div>
+        <div class="areas-note">📍 <strong>Don't see your parish?</strong> Give us a call at (504) 329-9223 — we may still be able to serve your area.</div>
       </div>
       <div>
         <div class="map-placeholder">
@@ -744,14 +633,14 @@ footer{background:#071420;padding:48px 0 24px}
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
+<!-- CONTACT -->
 <section class="contact" id="contact" style="padding:80px 0">
   <div class="container">
     <div class="contact-inner">
       <div>
         <p class="section-label" style="color:var(--gold)">Get in Touch</p>
         <h2>Ready for a Free Home Assessment?</h2>
-        <p class="contact-sub">Call or email us today. We'll confirm your Medicaid EAA eligibility, schedule a free home visit, and walk you through the process — at no obligation.</p>
+        <p class="contact-sub">Call or email us today. We'll discuss your needs, schedule a free home visit, and walk you through the whole process — no obligation, no pressure.</p>
         <div class="contact-items">
           <div class="c-item">
             <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
@@ -797,30 +686,30 @@ footer{background:#071420;padding:48px 0 24px}
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-top">
       <div>
         <div class="footer-brand">Young's <span>Quality</span> Contracting LLC</div>
-        <p class="footer-desc">Approved Medicaid EAA contractor serving the Greater New Orleans area. ADA-compliant home accessibility modifications at no cost to eligible clients.</p>
+        <p class="footer-desc">Professional home accessibility contractor serving the Greater New Orleans area. ADA-compliant modifications for elderly and disabled residents across Southeast Louisiana.</p>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
           <li><a href="#services">Wheelchair Ramps</a></li>
-          <li><a href="#services">Grab Bars & Handrails</a></li>
+          <li><a href="#services">Grab Bars &amp; Handrails</a></li>
           <li><a href="#services">Widened Doorways</a></li>
           <li><a href="#services">Roll-In Showers</a></li>
-          <li><a href="#services">Stair & Platform Lifts</a></li>
+          <li><a href="#services">Stair &amp; Platform Lifts</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
           <li><a href="#about">About Caden Young</a></li>
-          <li><a href="#medicaid">Medicaid EAA</a></li>
           <li><a href="#process">How It Works</a></li>
+          <li><a href="#gallery">Before &amp; After</a></li>
           <li><a href="#areas">Service Areas</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
@@ -828,19 +717,16 @@ footer{background:#071420;padding:48px 0 24px}
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2025 Young's Quality Contracting LLC · youngsaccessibility.com · River Ridge, Louisiana</span>
-      <span class="footer-badge">✓ EAA Approved Provider</span>
+      <span class="footer-badge">Licensed &amp; Insured · Louisiana</span>
     </div>
   </div>
 </footer>
 
 <script>
-// Nav scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
-
-// Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
@@ -848,8 +734,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
   document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
 });
-
-// Close mobile menu on link click
 document.querySelectorAll('#mobile-menu a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
