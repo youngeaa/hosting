@@ -30,7 +30,7 @@
   --shadow-lg:0 12px 48px rgba(10,34,64,0.16);
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--font-b);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-b);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
@@ -122,7 +122,7 @@ a{text-decoration:none;color:inherit}
 
 /* ─── SERVICES ─── */
 .services{background:var(--white)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:48px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px}
 .svc-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;transition:all .25s;position:relative;overflow:hidden}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
@@ -228,32 +228,97 @@ footer{background:#071420;padding:48px 0 24px}
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:40px}
-  .hero-card{max-width:480px}
-  .about-grid,.areas-inner,.contact-inner{grid-template-columns:1fr;gap:40px}
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero-card{max-width:100%}
+  .about-grid,.areas-inner,.contact-inner{grid-template-columns:1fr;gap:36px}
   .about-badge{right:0;bottom:-16px}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .gallery-item:first-child{grid-column:span 2;grid-row:span 1}
   .process-grid{grid-template-columns:1fr 1fr;gap:32px}
   .process-grid::before{display:none}
   .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .contact-inner{grid-template-columns:1fr}
 }
 @media(max-width:640px){
+  /* nav */
   .nav-links{display:none}
   .hamburger{display:flex}
-  .section{padding:56px 0}
-  .hero-inner{padding:100px 20px 60px}
-  .hero h1{font-size:2.2rem}
-  .hero-stats{gap:20px}
-  .trust-items{gap:20px;justify-content:flex-start;padding:0 16px}
-  .services-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr}
+
+  /* global spacing */
+  .section{padding:48px 0}
+  .container{padding:0 18px}
+
+  /* hero */
+  .hero-inner{padding:90px 18px 52px;gap:28px}
+  .hero h1{font-size:2rem;line-height:1.15}
+  .hero-desc{font-size:1rem}
+  .hero-actions{flex-direction:column;gap:10px}
+  .hero-actions .btn{width:100%;justify-content:center;padding:16px}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .hero-stat-num{font-size:1.5rem}
+  .hero-badge-row{flex-wrap:wrap;gap:8px}
+
+  /* hero card */
+  .hero-card{padding:20px}
+  .hc-val{font-size:.88rem}
+  .hero-phone-bar{flex-direction:column;align-items:flex-start;gap:6px}
+
+  /* trust bar */
+  .trust-bar{padding:16px 0}
+  .trust-items{gap:12px;flex-direction:column;align-items:flex-start;padding:0 18px}
+  .trust-item{font-size:.85rem}
+
+  /* section headings */
+  .section-title{font-size:1.7rem}
+  .section-sub{font-size:.95rem}
+  .section-label{font-size:11px}
+
+  /* about */
+  .about-quote{font-size:.95rem;padding:16px 18px;margin:20px 0}
+  .about-pills{gap:8px}
+  .about-pill{font-size:.78rem;padding:7px 12px}
+
+  /* services */
+  .services-grid{grid-template-columns:1fr;gap:16px}
+  .svc-card{padding:24px 20px}
+  .svc-card h3{font-size:1.1rem}
+
+  /* gallery */
+  .gallery-grid{grid-template-columns:1fr;gap:12px}
   .gallery-item:first-child{grid-column:span 1}
-  .process-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .parish-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .gallery-item:first-child .gallery-placeholder{min-height:220px}
+  .gallery-placeholder{aspect-ratio:4/3}
+
+  /* process */
+  .process-grid{grid-template-columns:1fr;gap:0}
+  .proc-step{padding:16px;display:flex;align-items:flex-start;gap:16px;text-align:left;border-bottom:1px solid var(--border)}
+  .proc-step:last-child{border-bottom:none}
+  .proc-num{width:48px;height:48px;font-size:1.1rem;flex-shrink:0;margin:0}
+  .proc-step h4{margin-bottom:4px}
+
+  /* why us */
+  .why-grid{grid-template-columns:1fr;gap:14px}
+  .why-card{padding:20px 18px;display:flex;gap:16px;align-items:flex-start}
+  .why-icon{flex-shrink:0;margin-bottom:0}
+  .why-card h4{margin-bottom:4px;font-size:.95rem}
+  .why-card p{font-size:.83rem}
+
+  /* areas */
+  .parish-grid{grid-template-columns:1fr 1fr !important;gap:10px}
+  .parish-card{padding:10px 12px}
+  .parish-name{font-size:.82rem}
+
+  /* contact */
+  .contact-inner{grid-template-columns:1fr;gap:32px}
+  .contact-card{padding:22px 18px}
+  .cta-big a{padding:16px;font-size:.95rem}
+  .c-val{font-size:.95rem}
+
+  /* footer */
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+  .footer-desc{font-size:.82rem}
+  footer{padding:36px 0 20px}
 }
 </style>
 </head>
@@ -303,7 +368,7 @@ footer{background:#071420;padding:48px 0 24px}
         <a href="#contact" class="btn btn-gold">Get a Free Assessment</a>
         <a href="#services" class="btn btn-outline">Our Services</a>
       </div>
-      <div class="hero-stats">
+      <div class="hero-stats" style="flex-wrap:wrap">
         <div class="hero-stat-item">
           <div class="hero-stat-num">5<span>+</span></div>
           <div class="hero-stat-label">Services Offered</div>
@@ -608,7 +673,7 @@ footer{background:#071420;padding:48px 0 24px}
         <p class="section-label">Service Coverage</p>
         <h2 class="section-title">We Serve All of Louisiana</h2>
         <p class="section-sub">Young's Quality Contracting LLC provides home accessibility modifications across all 9 regions of Louisiana — from New Orleans to Shreveport and everywhere in between.</p>
-        <div class="parish-grid" style="grid-template-columns:repeat(3,1fr);margin-top:28px">
+        <div class="parish-grid" style="grid-template-columns:repeat(3,1fr);margin-top:28px;">
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">New Orleans</div></div></div>
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">Baton Rouge</div></div></div>
           <div class="parish-card"><div class="parish-dot"></div><div><div class="parish-name">Bayou / South Central</div></div></div>
