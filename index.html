@@ -64,12 +64,12 @@ a{text-decoration:none;color:inherit}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-#mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--navy);z-index:999;padding:24px;overflow-y:auto;border-top:1px solid rgba(255,255,255,.08)}
-#mobile-menu.open{display:flex;flex-direction:column;gap:4px}
-#mobile-menu a{display:block;font-size:1rem;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+#mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--navy);z-index:999;padding:8px 24px 24px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+#mobile-menu.open{display:flex;flex-direction:column;gap:0}
+#mobile-menu a{display:block;font-size:1rem;font-weight:600;letter-spacing:.02em;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
 #mobile-menu a:last-of-type{border-bottom:none}
 #mobile-menu a:hover{color:var(--gold)}
-#mobile-menu .mob-cta{margin-top:20px;background:var(--gold);color:var(--white);padding:16px;border-radius:8px;text-align:center;font-size:1rem;font-weight:700;border:none;letter-spacing:.03em}
+#mobile-menu .mob-cta{margin-top:16px;background:var(--gold);color:var(--white);padding:15px;border-radius:8px;text-align:center;font-size:1rem;font-weight:700;border:none;letter-spacing:.03em;border-bottom:none}
 
 /* ─── HERO ─── */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
@@ -349,7 +349,7 @@ footer{background:#071420;padding:48px 0 24px}
   <a href="#gallery">Before &amp; After</a>
   <a href="#process">How It Works</a>
   <a href="#areas">Service Areas</a>
-  <a href="#contact" class="mob-cta">📞 Call (504) 329-9223</a>
+  <a href="tel:+15043299223" class="mob-cta">📞 Call (504) 329-9223</a>
 </div>
 
 <!-- HERO -->
@@ -789,13 +789,11 @@ const mobileMenu = document.getElementById('mobile-menu');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open');
-  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
 });
 document.querySelectorAll('#mobile-menu a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
   });
 });
 </script>
