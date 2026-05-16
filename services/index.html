@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Our Services | Young's Quality Contracting LLC">
+<meta property="og:description" content="Wheelchair ramps, grab bars, widened doorways, roll-in showers, and more. ADA-compliant home accessibility modifications across Louisiana.">
+<meta property="og:image" content="https://youngsaccessibility.com/logo.png">
+<meta property="og:url" content="https://youngsaccessibility.com/services">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1C1C1C">
+<title>Our Services | Young's Quality Contracting LLC – Louisiana</title>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1C1C1C;
+  --navy2:#2A2A2A;
+  --gold:#B8976A;
+  --gold2:#D4B896;
+  --gold-light:#F5EFE6;
+  --cream:#F4F1EC;
+  --white:#fff;
+  --gray:#64748b;
+  --border:#e2e8f0;
+  --text:#1e293b;
+  --font-h:'Playfair Display',Georgia,serif;
+  --font-b:'Inter',system-ui,sans-serif;
+  --radius:12px;
+  --shadow:0 4px 24px rgba(0,0,0,0.15);
+  --shadow-lg:0 12px 48px rgba(10,34,64,0.16);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-b);font-weight:600;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:14px 28px;transition:all .2s;cursor:pointer;border:none}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:#b87e20;transform:translateY(-1px)}
+.btn-outline-dark{background:transparent;border:2px solid var(--navy);color:var(--navy)}
+.btn-outline-dark:hover{background:var(--navy);color:var(--white)}
+
+/* ─── NAV ─── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);box-shadow:0 2px 20px rgba(10,34,64,.3);transition:all .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px;max-width:1200px;margin:0 auto}
+.nav-logo{font-family:var(--font-h);font-size:1.1rem;color:var(--white);line-height:1.2}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)!important}
+.nav-cta-btn{background:var(--gold);color:var(--white)!important;padding:10px 22px;border-radius:6px}
+.nav-cta-btn:hover{background:#b87e20!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--navy);z-index:999;padding:8px 24px 24px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+#mobile-menu.open{display:flex;flex-direction:column;gap:0}
+#mobile-menu a{display:block;font-size:1rem;font-weight:600;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+#mobile-menu a:last-of-type{border-bottom:none}
+#mobile-menu a:hover{color:var(--gold)}
+#mobile-menu .mob-cta{margin-top:16px;background:var(--gold);color:var(--white);padding:15px;border-radius:8px;text-align:center;font-size:1rem;font-weight:700;border-bottom:none}
+
+/* ─── NAV DROPDOWN ─── */
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px}
+.nav-drop-arrow{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s;flex-shrink:0}
+.nav-dropdown.open .nav-drop-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 4px);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--white);border-radius:10px;box-shadow:0 8px 40px rgba(0,0,0,.18);border:1px solid var(--border);padding:6px;min-width:230px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:500}
+.nav-dropdown.open .dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.dropdown-menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:.84rem;font-weight:600;color:var(--text);border-radius:7px;transition:background .15s,color .15s;text-transform:none;letter-spacing:0}
+.dropdown-menu a:hover{background:var(--gold-light);color:var(--gold)}
+.dropdown-menu a svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.dropdown-divider{height:1px;background:var(--border);margin:4px 0}
+
+/* ─── PAGE HERO ─── */
+.page-hero{background:var(--navy);padding:100px 0 64px;position:relative;overflow:hidden}
+.page-hero-accent{position:absolute;right:-80px;top:-80px;width:480px;height:480px;background:radial-gradient(circle,rgba(212,149,42,.12) 0%,transparent 70%);pointer-events:none}
+.page-hero-inner{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
+.breadcrumb a{color:rgba(255,255,255,.4);transition:color .2s}
+.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb span{color:var(--gold)}
+.page-hero h1{font-family:var(--font-h);font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero h1 em{color:var(--gold);font-style:normal}
+.page-hero-sub{color:rgba(255,255,255,.6);font-size:1.05rem;line-height:1.7;max-width:600px;margin-bottom:32px}
+.page-hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+.page-badge{background:rgba(212,149,42,.15);border:1px solid rgba(212,149,42,.35);color:var(--gold2);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px}
+
+/* ─── SERVICE NAV ─── */
+.svc-nav{background:var(--cream);border-bottom:1px solid var(--border);position:sticky;top:64px;z-index:100}
+.svc-nav-inner{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;max-width:1160px;margin:0 auto;padding:0 24px}
+.svc-nav-inner::-webkit-scrollbar{display:none}
+.svc-nav-link{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);padding:14px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s;flex-shrink:0}
+.svc-nav-link:hover{color:var(--navy)}
+.svc-nav-link.active{color:var(--gold);border-bottom-color:var(--gold)}
+.svc-nav-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ─── SERVICE SECTIONS ─── */
+.svc-section{padding:80px 0;border-bottom:1px solid var(--border)}
+.svc-section:last-of-type{border-bottom:none}
+.svc-section:nth-child(even){background:var(--cream)}
+.svc-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.svc-layout.flip{direction:rtl}
+.svc-layout.flip>*{direction:ltr}
+.svc-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.svc-icon-lg{width:56px;height:56px;background:var(--gold-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s}
+.svc-icon-lg svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.svc-tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:var(--gold-light);padding:4px 12px;border-radius:12px}
+.svc-section h2{font-family:var(--font-h);font-size:clamp(1.7rem,3vw,2.4rem);color:var(--navy);line-height:1.15;margin-bottom:16px}
+.svc-desc{font-size:.95rem;color:var(--gray);line-height:1.75;margin-bottom:24px}
+.svc-detail-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px}
+.sdf-item{display:flex;align-items:flex-start;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.sdf-check{width:18px;height:18px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.sdf-check svg{width:10px;height:10px;stroke:var(--gold);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.sdf-text{font-size:.83rem;font-weight:600;color:var(--navy);line-height:1.4}
+.svc-callout{background:var(--navy);border-radius:10px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;margin-bottom:24px}
+.svc-callout svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.svc-callout p{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.65}
+.svc-callout strong{color:var(--gold2)}
+.svc-img-wrap{position:relative;border-radius:16px;overflow:hidden}
+.svc-img-wrap img{width:100%;display:block;border-radius:16px}
+.svc-img-placeholder{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:rgba(255,255,255,.3);padding:32px;text-align:center}
+.svc-img-placeholder svg{width:56px;height:56px;stroke:rgba(255,255,255,.2);fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.svc-img-badge{position:absolute;bottom:16px;left:16px;background:var(--gold);color:var(--white);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:6px}
+.svc-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ─── CTA BANNER ─── */
+.cta-banner{background:var(--navy);padding:72px 0;position:relative;overflow:hidden}
+.cta-banner-accent{position:absolute;right:-60px;bottom:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(212,149,42,.12) 0%,transparent 70%);pointer-events:none}
+.cta-banner-inner{position:relative;z-index:1;text-align:center;max-width:640px;margin:0 auto}
+.cta-banner h2{font-family:var(--font-h);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--white);margin-bottom:14px}
+.cta-banner p{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.7;margin-bottom:32px}
+.cta-banner-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:var(--white);color:var(--navy)}
+.btn-white:hover{background:var(--cream);transform:translateY(-1px)}
+.btn-outline-white{background:transparent;border:2px solid rgba(255,255,255,.3);color:var(--white)}
+.btn-outline-white:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
+
+/* ─── FOOTER ─── */
+footer{background:#071420;padding:48px 0 24px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 2.2fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:28px}
+.footer-col ul.footer-areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 16px;flex-direction:unset}
+@media(max-width:640px){.footer-col ul.footer-areas-grid{grid-template-columns:repeat(2,1fr)}}
+.footer-brand{font-family:var(--font-h);font-size:1.2rem;color:var(--white);margin-bottom:10px}
+.footer-brand span{color:var(--gold)}
+.footer-desc{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.7;max-width:300px}
+.footer-col h5{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:.875rem;color:rgba(255,255,255,.5);transition:color .2s}
+.footer-col ul a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.3)}
+.footer-badge{background:rgba(212,149,42,.12);border:1px solid rgba(212,149,42,.3);color:var(--gold2);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:4px}
+
+/* ─── REVEAL ─── */
+.js-loaded .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js-loaded .reveal.visible{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.17s}
+.reveal-d3{transition-delay:.26s}
+.reveal-d4{transition-delay:.35s}
+
+/* ─── QUICK CONTACT ─── */
+.quick-contact{background:#0d1b2a;padding:72px 0;border-top:1px solid rgba(184,151,106,.25);position:relative}
+.quick-contact::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,rgba(184,151,106,.5) 30%,rgba(184,151,106,.5) 70%,transparent)}
+.quick-contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.qc-heading{font-family:var(--font-h);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--white);line-height:1.15;margin-bottom:14px}
+.qc-heading em{color:var(--gold);font-style:normal;display:block}
+.qc-sub{font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.7}
+.qc-form{display:flex;flex-direction:column;gap:12px}
+.qc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qc-input,.qc-select{font-family:var(--font-b);font-size:.95rem;color:var(--text);background:var(--white);border:none;border-radius:50px;padding:14px 22px;outline:none;width:100%;transition:box-shadow .2s}
+.qc-input:focus,.qc-select:focus{box-shadow:0 0 0 3px rgba(184,151,106,.4)}
+.qc-input::placeholder{color:#b0b8c4}
+.qc-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;padding-right:44px;cursor:pointer}
+.qc-submit{align-self:flex-start;background:transparent;border:2px solid var(--gold);color:var(--white);font-family:var(--font-b);font-weight:700;font-size:.95rem;letter-spacing:.04em;padding:14px 36px;border-radius:50px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.qc-submit:hover{background:var(--gold);color:var(--white);transform:translateY(-1px)}
+.qc-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.qc-success{display:none;color:var(--gold);font-weight:600;font-size:.95rem;padding:14px 0}
+.qc-success.show{display:block}
+@media(max-width:900px){.quick-contact-inner{grid-template-columns:1fr;gap:36px}}
+@media(max-width:640px){.qc-row{grid-template-columns:1fr}.quick-contact{padding:52px 0}}
+
+/* ─── STICKY CALL ─── */
+.sticky-call{display:flex;position:fixed;bottom:24px;right:20px;z-index:998;background:var(--gold);color:var(--white);font-family:var(--font-b);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-decoration:none;padding:14px 20px;border-radius:50px;box-shadow:0 4px 20px rgba(184,151,106,.4);align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
+.sticky-call:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(212,149,42,.6)}
+.sticky-call svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:640px){.sticky-call{display:flex}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .svc-layout{grid-template-columns:1fr;gap:36px}
+  .svc-layout.flip{direction:ltr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .page-hero{padding:80px 0 48px}
+  .svc-section{padding:52px 0}
+  .svc-img-wrap{order:-1}
+  .svc-detail-features{grid-template-columns:1fr}
+  .svc-actions{flex-direction:column}
+  .svc-actions .btn{justify-content:center}
+  .cta-banner{padding:52px 0}
+  .cta-banner-actions{flex-direction:column;align-items:center}
+  .footer-top{grid-template-columns:1fr;gap:24px;padding-bottom:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+  footer{padding:32px 0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">Young's <span>Quality</span> Contracting</a>
+    <ul class="nav-links">
+      <li><a href="../#about">About</a></li>
+      <li class="nav-dropdown">
+        <a href="../services/" class="active">Services <svg class="nav-drop-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="dropdown-menu">
+          <a href="#ramps"><svg viewBox="0 0 24 24"><path d="M3 18 L9 10 L15 14 L21 6"/><path d="M3 18 H21"/></svg>Wheelchair Ramps</a>
+          <a href="#grab-bars"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6"/><path d="M8 11h8"/></svg>Grab Bars &amp; Handrails</a>
+          <a href="#doorways"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>Widened Doorways</a>
+          <a href="#showers"><svg viewBox="0 0 24 24"><path d="M4 20V8q0-4 4-4h8q4 0 4 4v12"/><path d="M2 20h20"/></svg>Roll-In Showers &amp; Tub Cuts</a>
+          <div class="dropdown-divider"></div>
+          <a href="../services/" style="color:var(--gold)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>View All Services</a>
+        </div>
+      </li>
+      <li><a href="../#gallery">Gallery</a></li>
+      <li><a href="../#areas">Service Areas</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+      <li><a href="../contact/" class="nav-cta-btn">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="../#about">About Us</a>
+  <a href="../services/">Our Services</a>
+  <a href="../#gallery">Before &amp; After</a>
+  <a href="../#process">How It Works</a>
+  <a href="../#areas">Service Areas</a>
+  <a href="../faq/">FAQ</a>
+  <a href="../contact/" class="mob-cta">Get a Free Assessment</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-accent"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb">
+      <a href="../">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Services</span>
+    </div>
+    <h1>Home Accessibility <em>Services</em></h1>
+    <p class="page-hero-sub">Every modification we perform is installed to ADA standards — from the first nail to the final walkthrough. Here's a full breakdown of what we offer and what you can expect.</p>
+    <div class="page-hero-badges">
+      <span class="page-badge">✓ ADA-Compliant</span>
+      <span class="page-badge">✓ Free Assessments</span>
+      <span class="page-badge">✓ Licensed &amp; Insured</span>
+      <span class="page-badge">✓ All of Louisiana</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE NAV -->
+<nav class="svc-nav" aria-label="Jump to service">
+  <div class="svc-nav-inner">
+    <a href="#ramps" class="svc-nav-link">
+      <svg viewBox="0 0 24 24"><path d="M3 18 L9 10 L15 14 L21 6"/><path d="M3 18 H21"/></svg>Wheelchair Ramps
+    </a>
+    <a href="#grab-bars" class="svc-nav-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6"/><path d="M8 11h8"/></svg>Grab Bars
+    </a>
+    <a href="#doorways" class="svc-nav-link">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>Doorways
+    </a>
+    <a href="#showers" class="svc-nav-link">
+      <svg viewBox="0 0 24 24"><path d="M4 20V8q0-4 4-4h8q4 0 4 4v12"/><path d="M2 20h20"/></svg>Roll-In Showers
+    </a>
+  </div>
+</nav>
+
+<!-- ─── WHEELCHAIR RAMPS ─── -->
+<section class="svc-section" id="ramps">
+  <div class="container">
+    <div class="svc-layout">
+      <div>
+        <div class="svc-header">
+          <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><path d="M3 18 L9 10 L15 14 L21 6"/><path d="M3 18 H21"/></svg></div>
+          <span class="svc-tag">Service 01</span>
+        </div>
+        <h2 class="reveal">Wheelchair Ramps</h2>
+        <p class="svc-desc reveal reveal-d1">A well-built ramp isn't just wood and hardware — it's the difference between independence and relying on others every time you leave or enter your home. We custom-build every ramp to fit your specific entry, meet ADA slope requirements, and handle real Louisiana weather year-round.</p>
+        <p class="svc-desc reveal reveal-d1">We use pressure-treated lumber rated for ground contact, galvanized fasteners, and non-slip decking materials. Every ramp includes proper handrails on both sides and is engineered for the weight loads required by ADA guidelines.</p>
+        <div class="svc-detail-features reveal reveal-d2">
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Exterior &amp; interior ramp builds</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">ADA 1:12 slope ratio standard</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Non-slip decking surface</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Handrails both sides</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Pressure-treated lumber</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Landing platform included</div></div>
+        </div>
+        <div class="svc-callout reveal reveal-d3">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p><strong>ADA Slope Requirement:</strong> The standard slope ratio for wheelchair ramps is 1:12 — meaning 1 inch of rise for every 12 inches of ramp length. We measure and build every ramp to this exact specification.</p>
+        </div>
+        <div class="svc-actions reveal reveal-d3">
+          <a href="../contact/?service=ramps" class="btn btn-gold">Get a Free Assessment</a>
+          <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
+        </div>
+      </div>
+      <div class="svc-img-wrap reveal reveal-d1">
+        <img src="../assets/ramp.png" alt="Completed wheelchair ramp installation by Young's Quality Contracting">
+        <div class="svc-img-badge">Completed Project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GRAB BARS ─── -->
+<section class="svc-section" id="grab-bars">
+  <div class="container">
+    <div class="svc-layout flip">
+      <div>
+        <div class="svc-header">
+          <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6"/><path d="M8 11h8"/><path d="M10 13l-2 8"/><path d="M14 13l2 8"/></svg></div>
+          <span class="svc-tag">Service 02</span>
+        </div>
+        <h2 class="reveal">Grab Bars &amp; Handrails</h2>
+        <p class="svc-desc reveal reveal-d1">Falls are the leading cause of injury for elderly adults at home — and most happen in the bathroom. Properly installed grab bars are one of the single most effective modifications you can make. The key word is <em>properly</em>: a bar screwed into drywall alone will fail. We anchor every bar directly into wall studs or use backing boards for maximum load strength.</p>
+        <p class="svc-desc reveal reveal-d1">We install bars in tub surrounds, showers, beside toilets, along hallways, and on stairways — wherever support is needed. We also offer a range of finishes to match your existing fixtures.</p>
+        <div class="svc-detail-features reveal reveal-d2">
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Stud-anchored installation</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">250 lb+ load capacity</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Tub &amp; shower bar placement</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Toilet safety bars</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Hallway &amp; stairway rails</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Chrome, brushed nickel &amp; more</div></div>
+        </div>
+        <div class="svc-callout reveal reveal-d3">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p><strong>Why proper anchoring matters:</strong> A grab bar must be able to support 250 lbs of force in any direction per ADA standards. We never rely on drywall anchors alone — every bar goes into structural framing or a backing board.</p>
+        </div>
+        <div class="svc-actions reveal reveal-d3">
+          <a href="../contact/?service=grab-bars" class="btn btn-gold">Get a Free Assessment</a>
+          <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
+        </div>
+      </div>
+      <div class="svc-img-wrap reveal reveal-d1">
+        <img src="../assets/grab-bar.png" alt="Grab bar installation by Young's Quality Contracting">
+        <div class="svc-img-badge">Completed Project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DOORWAYS ─── -->
+<section class="svc-section" id="doorways">
+  <div class="container">
+    <div class="svc-layout">
+      <div>
+        <div class="svc-header">
+          <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M3 12h6"/></svg></div>
+          <span class="svc-tag">Service 03</span>
+        </div>
+        <h2 class="reveal">Widened Doorways</h2>
+        <p class="svc-desc reveal reveal-d1">Standard interior doorways are typically 28–30 inches wide — too narrow for most wheelchairs and many walkers. Widening a doorway to 32–36 inches of clear opening is a structural modification that requires removing framing, adjusting load paths in some cases, and finishing it out so it looks like it was always that way.</p>
+        <p class="svc-desc reveal reveal-d1">We handle the full scope: framing, drywall, trim, hardware, and paint-ready finish work. You'll never know the wall was touched, but you'll have the clear access you need for daily independent living.</p>
+        <div class="svc-detail-features reveal reveal-d2">
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">32–36" ADA clear opening</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Full structural framing work</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Drywall &amp; finish included</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">New door &amp; hardware</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Trim &amp; casing matched</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Paint-ready finish work</div></div>
+        </div>
+        <div class="svc-callout reveal reveal-d3">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p><strong>ADA standard:</strong> Doorways must provide a minimum 32-inch clear opening (measured from the door face to the opposite stop) — with 36 inches recommended for comfortable wheelchair passage in most residential applications.</p>
+        </div>
+        <div class="svc-actions reveal reveal-d3">
+          <a href="../contact/?service=doorways" class="btn btn-gold">Get a Free Assessment</a>
+          <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
+        </div>
+      </div>
+      <div class="svc-img-wrap reveal reveal-d1">
+        <img src="../assets/wide-door.png" alt="Widened doorway installation by Young's Quality Contracting">
+        <div class="svc-img-badge">Completed Project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROLL-IN SHOWERS ─── -->
+<section class="svc-section" id="showers">
+  <div class="container">
+    <div class="svc-layout flip">
+      <div>
+        <div class="svc-header">
+          <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><path d="M4 20V8q0-4 4-4h8q4 0 4 4v12"/><path d="M2 20h20"/><path d="M8 20v-8q0-2 2-2h4q2 0 2 2v8"/></svg></div>
+          <span class="svc-tag">Service 04</span>
+        </div>
+        <h2 class="reveal">Roll-In Showers &amp; Tub Cuts</h2>
+        <p class="svc-desc reveal reveal-d1">Stepping over a tub wall or a shower curb is one of the most dangerous moments of the day for elderly and disabled residents. We eliminate that barrier entirely — either by converting your existing tub to a zero-threshold roll-in shower, or by cutting down the tub wall for a safe step-in entry.</p>
+        <p class="svc-desc reveal reveal-d1">Every conversion is fully waterproofed using a membrane system before tile work begins. We finish with slip-resistant tile, proper linear drain placement, and integrated grab bars so the entire space is functional, beautiful, and safe.</p>
+        <div class="svc-detail-features reveal reveal-d2">
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Zero-threshold roll-in entry</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Tub wall cut-down option</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Waterproof membrane system</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Slip-resistant tile flooring</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Linear drain installation</div></div>
+          <div class="sdf-item"><div class="sdf-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="sdf-text">Built-in grab bar rough-in</div></div>
+        </div>
+        <div class="svc-callout reveal reveal-d3">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p><strong>Waterproofing first:</strong> We never tile directly over drywall in wet areas. Every conversion uses a proper waterproofing membrane — the most important step most contractors skip. We don't.</p>
+        </div>
+        <div class="svc-actions reveal reveal-d3">
+          <a href="../contact/?service=showers" class="btn btn-gold">Get a Free Assessment</a>
+          <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
+        </div>
+      </div>
+      <div class="svc-img-wrap reveal reveal-d1">
+        <img src="../assets/shower.jpeg" alt="Completed roll-in shower conversion by Young's Quality Contracting">
+        <div class="svc-img-badge">Completed Project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-banner-accent"></div>
+  <div class="container cta-banner-inner reveal">
+    <p style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Ready to Get Started?</p>
+    <h2>Schedule Your Free Home Assessment</h2>
+    <p>We'll come to you, assess your space, and walk you through your options — no obligation, no pressure. Just honest guidance from someone who actually cares about getting it right.</p>
+    <div class="cta-banner-actions">
+      <a href="../contact/" class="btn btn-gold">Request a Free Assessment</a>
+      <a href="tel:+15043299223" class="btn btn-outline-white">Call (504) 329-9223</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT -->
+<section class="quick-contact">
+  <div class="container">
+    <div class="quick-contact-inner">
+      <div class="reveal">
+        <p style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Free — No Obligation</p>
+        <h2 class="qc-heading">Get in Touch with Our<em>Accessibility Experts</em></h2>
+        <p class="qc-sub">Fill out the form and we'll get back to you within one business day to schedule your free home assessment.</p>
+      </div>
+      <div class="reveal reveal-d1">
+        <form class="qc-form" id="qc-form-svc">
+          <input class="qc-input" type="text" name="name" placeholder="Your Name *" required>
+          <div class="qc-row">
+            <input class="qc-input" type="tel" name="phone" placeholder="Phone Number *" required>
+            <input class="qc-input" type="email" name="email" placeholder="Email Address">
+          </div>
+          <select class="qc-select" name="service">
+            <option value="" disabled selected>Service Needed</option>
+            <option value="ramps">Wheelchair Ramp</option>
+            <option value="grab-bars">Grab Bars &amp; Handrails</option>
+            <option value="doorways">Widened Doorways</option>
+            <option value="showers">Roll-In Shower / Tub Cut</option>
+
+            <option value="multiple">Multiple Services</option>
+            <option value="unsure">Not Sure Yet</option>
+          </select>
+          <div>
+            <button type="submit" class="qc-submit" id="qc-btn-svc">Let's Talk</button>
+            <p class="qc-success" id="qc-success-svc">✓ Request received — we'll be in touch shortly!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Young's <span>Quality</span> Contracting LLC</div>
+        <p class="footer-desc">Professional home accessibility contractor serving all of Louisiana. ADA-compliant modifications for elderly and disabled residents statewide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#ramps">Wheelchair Ramps</a></li>
+          <li><a href="#grab-bars">Grab Bars &amp; Handrails</a></li>
+          <li><a href="#doorways">Widened Doorways</a></li>
+          <li><a href="#showers">Roll-In Showers</a></li>
+          <li><a href="../contact/" style="font-style:italic;color:rgba(255,255,255,.35)">&amp; Much More — Just Ask</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Areas Serviced</h5>
+        <ul class="footer-areas-grid">
+          <li><a href="../">New Orleans</a></li>
+          <li><a href="../">Baton Rouge</a></li>
+          <li><a href="../">Lafayette</a></li>
+          <li><a href="../">Metairie</a></li>
+          <li><a href="../">Denham Springs</a></li>
+          <li><a href="../">Broussard</a></li>
+          <li><a href="../">Kenner</a></li>
+          <li><a href="../">Prairieville</a></li>
+          <li><a href="../">Lake Charles</a></li>
+          <li><a href="../">Chalmette</a></li>
+          <li><a href="../">Gonzales</a></li>
+          <li><a href="../">Sulphur</a></li>
+          <li><a href="../">Slidell</a></li>
+          <li><a href="../">Houma</a></li>
+          <li><a href="../">Shreveport</a></li>
+          <li><a href="../">Covington</a></li>
+          <li><a href="../">Thibodaux</a></li>
+          <li><a href="../">Bossier City</a></li>
+          <li><a href="../">Mandeville</a></li>
+          <li><a href="../">New Iberia</a></li>
+          <li><a href="../">Monroe</a></li>
+          <li><a href="../">Hammond</a></li>
+          <li><a href="../">Morgan City</a></li>
+          <li><a href="../">Alexandria</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Young's Quality Contracting LLC · youngsaccessibility.com · Louisiana</span>
+      <span class="footer-badge">Licensed &amp; Insured · Louisiana</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js-loaded');
+
+document.querySelectorAll('.nav-dropdown').forEach(el => {
+  let timer;
+  el.addEventListener('mouseenter', () => { clearTimeout(timer); el.classList.add('open'); });
+  el.addEventListener('mouseleave', () => { timer = setTimeout(() => el.classList.remove('open'), 150); });
+});
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+// Reveal on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Active service nav link on scroll
+const sections = ['ramps','grab-bars','doorways','showers'];
+const svcLinks = document.querySelectorAll('.svc-nav-link');
+const scrollSpy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      svcLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) scrollSpy.observe(el);
+});
+
+// ─── QUICK CONTACT FORM ───
+(function(){
+  const FORMSPREE = 'https://formspree.io/f/xqenrajn';
+  const form = document.getElementById('qc-form-svc');
+  const btn  = document.getElementById('qc-btn-svc');
+  const success = document.getElementById('qc-success-svc');
+  if (!form) return;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name  = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    if (!name || !phone) { form.querySelector('[name="' + (!name ? 'name' : 'phone') + '"]').focus(); return; }
+    btn.disabled = true; btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(FORMSPREE, { method:'POST', headers:{'Accept':'application/json'}, body: new FormData(form) });
+      if (res.ok) { form.reset(); success.classList.add('show'); btn.style.display='none'; }
+      else throw new Error();
+    } catch { btn.disabled = false; btn.textContent = "Let's Talk"; alert('Something went wrong — please call (504) 329-9223.'); }
+  });
+})();
+</script>
+
+<a href="tel:+15043299223" class="sticky-call">
+  <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+  Call Now
+</a>
+
+</body>
+</html>
