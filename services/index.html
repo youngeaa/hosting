@@ -61,6 +61,8 @@ a{text-decoration:none;color:inherit}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 #mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--navy);z-index:999;padding:8px 24px 24px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+#menu-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45)}
+#menu-overlay.open{display:block}
 #mobile-menu.open{display:flex;flex-direction:column;gap:0}
 #mobile-menu a{display:block;font-size:1rem;font-weight:600;color:rgba(255,255,255,.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
 #mobile-menu a:last-of-type{border-bottom:none}
@@ -206,6 +208,10 @@ footer{background:#071420;padding:48px 0 24px}
   .page-hero{padding:80px 0 48px}
   .svc-section{padding:52px 0}
   .svc-img-wrap{order:-1}
+  .svc-nav-inner{display:grid;grid-template-columns:1fr 1fr;overflow-x:visible;padding:0}
+  .svc-nav-link{justify-content:center;padding:12px 8px;font-size:.75rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border)}
+  .svc-nav-link:nth-child(even){border-right:none}
+  .svc-nav-link:nth-child(3),.svc-nav-link:nth-child(4){border-bottom:none}
   .svc-detail-features{grid-template-columns:1fr}
   .svc-actions{flex-direction:column}
   .svc-actions .btn{justify-content:center}
@@ -248,6 +254,7 @@ footer{background:#071420;padding:48px 0 24px}
 </nav>
 
 <!-- Mobile Menu -->
+<div id="menu-overlay"></div>
 <div id="mobile-menu">
   <a href="../#about">About Us</a>
   <a href="../services/">Our Services</a>
@@ -561,16 +568,18 @@ document.querySelectorAll('.nav-dropdown').forEach(el => {
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+function closeMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  menuOverlay.classList.remove('open');
+}
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
+  const opening = !mobileMenu.classList.contains('open');
+  opening ? (hamburger.classList.add('open'), mobileMenu.classList.add('open'), menuOverlay.classList.add('open')) : closeMenu();
 });
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
-});
+menuOverlay.addEventListener('click', closeMenu);
+document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', closeMenu));
 
 // Reveal on scroll
 const obs = new IntersectionObserver(entries => {
