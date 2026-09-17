@@ -11,7 +11,7 @@
 </script>
 
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="description" content="Wheelchair ramps, stair lifts, grab bars & accessible bathrooms in Metairie, Kenner, New Orleans, Slidell, Chalmette & Jefferson Parish.">
 <meta property="og:title" content="Young's Quality Contracting | Metairie Accessibility Contractor">
 <meta property="og:description" content="Wheelchair ramps, stair lifts, grab bars & accessible bathrooms in Metairie, Kenner, New Orleans, Slidell, Chalmette & Jefferson Parish.">
@@ -20,6 +20,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#1C1C1C">
+<meta name="color-scheme" content="dark">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Young's Quality Contracting | Metairie Accessibility Contractor</title>
@@ -103,7 +104,7 @@ a{text-decoration:none;color:inherit}
 .btn-outline:hover{background:rgba(255,255,255,.12)}
 
 /* ─── NAV ─── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s;padding-top:env(safe-area-inset-top)}
 #nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(10,34,64,.3)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px;max-width:1200px;margin:0 auto}
 .nav-logo{font-family:var(--font-h);font-size:1.1rem;color:var(--white);line-height:1.2}
@@ -118,7 +119,7 @@ a{text-decoration:none;color:inherit}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-#mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--navy);z-index:999;padding:8px 24px 24px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+#mobile-menu{display:none;position:fixed;top:calc(64px + env(safe-area-inset-top));left:0;right:0;background:var(--navy);z-index:999;padding:8px 24px 24px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px rgba(0,0,0,.4);max-height:calc(100dvh - 64px - env(safe-area-inset-top));overflow-y:auto}
 #mobile-menu.open{display:flex;flex-direction:column;gap:0}
 #menu-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45);cursor:pointer}
 #menu-overlay.open{display:block}
@@ -451,7 +452,7 @@ footer{background:#071420;padding:48px 0 24px}
 @media(max-width:640px){.qc-row{grid-template-columns:1fr}.quick-contact{padding:52px 0}}
 
 /* ─── STICKY CALL BUTTON ─── */
-.sticky-call{display:flex;position:fixed;bottom:24px;right:20px;z-index:998;background:var(--gold);color:var(--white);font-family:var(--font-b);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-decoration:none;padding:14px 20px;border-radius:50px;box-shadow:0 4px 20px rgba(184,151,106,.4);align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
+.sticky-call{display:flex;position:fixed;bottom:calc(24px + env(safe-area-inset-bottom));right:calc(20px + env(safe-area-inset-right));z-index:998;background:var(--gold);color:var(--white);font-family:var(--font-b);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-decoration:none;padding:14px 20px;border-radius:50px;box-shadow:0 4px 20px rgba(184,151,106,.4);align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
 .sticky-call:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(212,149,42,.6)}
 .sticky-call svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 @media(max-width:640px){.sticky-call{display:flex}}
