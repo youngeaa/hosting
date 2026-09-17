@@ -88,7 +88,7 @@
 }
 html{scroll-behavior:smooth}
 html{background:var(--navy)}
-body{font-family:var(--font-b);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--font-b);color:var(--text);background:var(--navy);-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
@@ -104,8 +104,8 @@ a{text-decoration:none;color:inherit}
 .btn-outline:hover{background:rgba(255,255,255,.12)}
 
 /* ─── NAV ─── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s;padding-top:env(safe-area-inset-top)}
-#nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(10,34,64,.3)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .3s;padding-top:env(safe-area-inset-top);background:var(--navy)}
+#nav.scrolled{box-shadow:0 2px 20px rgba(10,34,64,.3)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px;max-width:1200px;margin:0 auto}
 .nav-logo{font-family:var(--font-h);font-size:1.1rem;color:var(--white);line-height:1.2}
 .nav-logo span{color:var(--gold)}
