@@ -127,12 +127,13 @@ a{text-decoration:none;color:inherit}
 .svc-nav-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ─── SERVICE SECTIONS ─── */
-.svc-section{padding:80px 0;border-bottom:1px solid var(--border)}
+.svc-section{padding:80px 0;border-bottom:1px solid var(--border);background:var(--white)}
 .svc-section:last-of-type{border-bottom:none}
 .svc-section:nth-child(even){background:var(--cream)}
 .svc-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .svc-layout.flip{direction:rtl}
 .svc-layout.flip>*{direction:ltr}
+.svc-layout.single{grid-template-columns:1fr;max-width:700px}
 .svc-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
 .svc-icon-lg{width:56px;height:56px;background:var(--gold-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s}
 .svc-icon-lg svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
@@ -217,9 +218,9 @@ footer{background:#071420;padding:48px 0 24px}
 @media(max-width:640px){.qc-row{grid-template-columns:1fr}.quick-contact{padding:52px 0}}
 
 /* ─── STICKY CALL ─── */
-.sticky-call{display:flex;position:fixed;bottom:calc(24px + env(safe-area-inset-bottom));right:calc(20px + env(safe-area-inset-right));z-index:998;background:var(--gold);color:var(--white);font-family:var(--font-b);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-decoration:none;padding:14px 20px;border-radius:50px;box-shadow:0 4px 20px rgba(184,151,106,.4);align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
-.sticky-call:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(212,149,42,.6)}
-.sticky-call svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.sticky-call{display:flex;position:fixed;bottom:calc(70px + env(safe-area-inset-bottom));right:calc(20px + env(safe-area-inset-right));z-index:998;background:rgba(28,28,28,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--gold2);font-family:var(--font-b);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-decoration:none;padding:12px 18px;border:2px solid var(--gold);border-radius:50px;box-shadow:0 4px 20px rgba(0,0,0,.25);align-items:center;gap:8px;transition:transform .2s,box-shadow .2s,background .2s;transform:translateZ(0);-webkit-transform:translateZ(0)}
+.sticky-call:hover{transform:translateY(-2px);background:rgba(28,28,28,.8);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.sticky-call svg{width:16px;height:16px;stroke:var(--gold2);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:640px){.sticky-call{display:flex}}
 
 /* ─── RESPONSIVE ─── */
@@ -500,7 +501,7 @@ footer{background:#071420;padding:48px 0 24px}
 <!-- ─── STAIR LIFTS ─── -->
 <section class="svc-section" id="stair-lifts">
   <div class="container">
-    <div class="svc-layout">
+    <div class="svc-layout single">
       <div>
         <div class="svc-header">
           <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><path d="M4 4h4v4h4v4h4v4h4"/><path d="M4 20h16"/></svg></div>
@@ -527,12 +528,6 @@ footer{background:#071420;padding:48px 0 24px}
           <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
         </div>
       </div>
-      <div class="svc-img-wrap reveal reveal-d1">
-        <div class="svc-img-placeholder">
-          <svg viewBox="0 0 24 24"><path d="M4 4h4v4h4v4h4v4h4"/><path d="M4 20h16"/></svg>
-          <p>Project photos coming soon</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -540,7 +535,7 @@ footer{background:#071420;padding:48px 0 24px}
 <!-- ─── VERTICAL PLATFORM LIFTS ─── -->
 <section class="svc-section" id="vertical-lifts">
   <div class="container">
-    <div class="svc-layout flip">
+    <div class="svc-layout single">
       <div>
         <div class="svc-header">
           <div class="svc-icon-lg"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 3v18M15 3v18"/></svg></div>
@@ -565,12 +560,6 @@ footer{background:#071420;padding:48px 0 24px}
         <div class="svc-actions reveal reveal-d3">
           <a href="../contact/?service=vertical-lifts" class="btn btn-gold">Get a Free Assessment</a>
           <a href="tel:+15043299223" class="btn btn-outline-dark">Call (504) 329-9223</a>
-        </div>
-      </div>
-      <div class="svc-img-wrap reveal reveal-d1">
-        <div class="svc-img-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M9 3v18M15 3v18"/></svg>
-          <p>Project photos coming soon</p>
         </div>
       </div>
     </div>
