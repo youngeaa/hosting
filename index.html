@@ -136,7 +136,7 @@ a{text-decoration:none;color:inherit}
 #mobile-menu .mob-svc-sub a:hover{color:rgba(255,255,255,.8)}
 
 /* ─── HERO ─── */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
+.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
 .hero-bg{position:absolute;inset:-20%;background:linear-gradient(135deg,#0f0f0f 0%,#222222 50%,#1C1C1C 100%);will-change:transform}
 .hero-pattern{position:absolute;inset:-20%;opacity:.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;will-change:transform}
 .hero-accent{position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(212,149,42,.15) 0%,transparent 70%);pointer-events:none}
@@ -532,8 +532,8 @@ footer{background:#071420;padding:48px 0 24px}
           <div class="hero-stat-label">Services Offered</div>
         </div>
         <div class="hero-stat-item">
-          <div class="hero-stat-num"><span id="stat-regions">0</span><span>+</span></div>
-          <div class="hero-stat-label">Projects Completed</div>
+          <div class="hero-stat-num">Free</div>
+          <div class="hero-stat-label">In-Home Assessments</div>
         </div>
         <div class="hero-stat-item">
           <div class="hero-stat-num">ADA</div>
@@ -1080,7 +1080,6 @@ function countUp(el, target, duration) {
 }
 setTimeout(() => {
   countUp(document.getElementById('stat-services'), 6, 1200);
-  countUp(document.getElementById('stat-regions'), 10, 1500);
 }, 500);
 
 </script>
